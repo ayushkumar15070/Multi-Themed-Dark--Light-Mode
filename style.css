@@ -1,0 +1,98 @@
+/* Basic reset */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Root variables for themes */
+:root {
+      --background-light: #f0f0f3;
+      --background-dark: #1e1e1e;
+      --background-sepia: #f6e5c6;
+      --text-light: #333;
+      --text-dark: #f0f0f3;
+      --text-sepia: #3b3026;
+      --highlight-light: #d4d4f7;
+      --highlight-dark: #383838;
+      --highlight-sepia: #d1b38e;
+}
+
+body.light {
+      background-color: var(--background-light);
+      color: var(--text-light);
+}
+
+body.dark {
+      background-color: var(--background-dark);
+      color: var(--text-dark);
+}
+
+body.sepia {
+      background-color: var(--background-sepia);
+      color: var(--text-sepia);
+}
+
+body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Theme toggle styling */
+.theme-toggle {
+      margin-bottom: 20px;
+      text-align: center;
+}
+
+.theme-toggle label {
+      font-size: 1.2em;
+      margin-right: 10px;
+}
+
+#themeSelector {
+      padding: 8px;
+      font-size: 1em;
+      border-radius: 10px;
+      border: 1px solid var(--highlight-light);
+      background-color: transparent;
+      transition: border-color 0.3s ease;
+}
+
+/* Change border color on theme */
+body.light #themeSelector {
+      border-color: var(--highlight-light);
+}
+
+body.dark #themeSelector {
+      border-color: var(--highlight-dark);
+}
+
+body.sepia #themeSelector {
+      border-color: var(--highlight-sepia);
+}
+
+.content {
+      text-align: center;
+      max-width: 500px;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+      background-color: rgba(255, 255, 255, 0.8);
+      transition: background-color 0.5s ease;
+}
+
+h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+}
+
+p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: inherit;
+}
